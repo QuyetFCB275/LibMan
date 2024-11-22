@@ -102,7 +102,7 @@
         <th>Tác Giả</th>
         <th>Thể Loại</th>
         <th>Giá</th>
-        <th>Nhà cung cấp</th>
+        <th>Nhà xuất bản</th>
     </tr>
     </thead>
     <tbody>

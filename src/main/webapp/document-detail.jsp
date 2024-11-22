@@ -141,7 +141,7 @@
             <p><strong>Tác Giả:</strong> <%= author %></p>
             <p><strong>Thể Loại:</strong> <%= category %></p>
             <p><strong>Giá:</strong> <%= price %></p>
-            <p><strong>Nhà cung cấp:</strong> <%= publisher %></p>
+            <p><strong>Nhà xuất bản:</strong> <%= publisher %></p>
         </div>
 
         <!-- Phần hình ảnh -->
