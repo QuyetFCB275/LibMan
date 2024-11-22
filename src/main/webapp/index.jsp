@@ -75,7 +75,7 @@
                 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/pttk", "root", "12345");
 
                 // Kiểm tra thông tin đăng nhập
-                String sql = "SELECT * FROM tblUser WHERE username = ? AND password = ?";
+                String sql = "SELECT * FROM tblUser642 WHERE username = ? AND password = ?";
                 pstmt = conn.prepareStatement(sql);
                 pstmt.setString(1, username);
                 pstmt.setString(2, password);
@@ -83,7 +83,7 @@
 
                 if (rs.next()) {
                     // Đăng nhập thành công, chuyển hướng
-                    response.sendRedirect("welcome.jsp");
+                    response.sendRedirect("welcome642.jsp");
                 } else {
                     // Đăng nhập thất bại
                     errorMessage = " username hoặc mật khẩu không đúng. Vui lòng thử lại.";
@@ -114,7 +114,7 @@
     </form>
 
     <!-- Nút Đăng Ký -->
-    <form action="register.jsp" method="get">
+    <form action="register642.jsp" method="get">
         <button type="submit" class="register-btn">Đăng Ký</button>
     </form>
 </div>

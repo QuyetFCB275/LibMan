@@ -1,18 +1,18 @@
 package org.quyet.libman.dao.impl;
 
-import org.quyet.libman.dao.DocumentDAO;
-import org.quyet.libman.model.Document;
+import org.quyet.libman.dao.DocumentDAO642;
+import org.quyet.libman.model.Document642;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DocumentDaoImpl implements DocumentDAO {
+public class DocumentDaoImpl642 implements DocumentDAO642 {
     private String jdbcURL="jdbc:mysql://localhost:3306/pttk?useSSL=false";
     private String jdbcUsername="root";
     private String jdbcPassword="12345";
 
-    public DocumentDaoImpl() {
+    public DocumentDaoImpl642() {
     }
 
     private Connection getConnection() {
@@ -30,18 +30,18 @@ public class DocumentDaoImpl implements DocumentDAO {
         return connection;
     }
     @Override
-    public List<Document> getDocumentsByName(String name) {
-        List<Document> documents = new ArrayList<>();
+    public List<Document642> getDocumentsByName(String name) {
+        List<Document642> documents = new ArrayList<>();
 
         // Kết nối database và tìm kiếm tài liệu
         try (Connection connection = getConnection()) {
-            String sql = "SELECT * FROM tblDocument WHERE name LIKE ?";
+            String sql = "SELECT * FROM tblDocument642 WHERE name LIKE ?";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, "%" + name + "%"); // Tìm kiếm tài liệu có tên chứa từ khóa
             ResultSet rs = statement.executeQuery();
 
             while (rs.next()) {
-                Document doc = new Document(
+                Document642 doc = new Document642(
                         rs.getString("id"),
                         rs.getString("name"),
                         rs.getString("author"),

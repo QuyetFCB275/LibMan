@@ -50,7 +50,7 @@
     <a href="update-info.jsp" class="btn">Thay đổi thông tin</a>
 
     <!-- Nút tìm thông tin tài liệu -->
-    <a href="search-document.jsp" class="btn">Tìm thông tin tài liệu</a>
+    <a href="search-document642.jsp" class="btn">Tìm thông tin tài liệu</a>
 
     <!-- Nút đăng xuất -->
     <a href="logout.jsp" class="btn logout">Đăng xuất</a>

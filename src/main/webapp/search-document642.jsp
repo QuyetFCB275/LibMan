@@ -1,7 +1,7 @@
 <%@ page import="java.util.List" %>
-<%@ page import="org.quyet.libman.model.Document" %>
-<%@ page import="org.quyet.libman.dao.DocumentDAO" %>
-<%@ page import="org.quyet.libman.dao.impl.DocumentDaoImpl" %>
+<%@ page import="org.quyet.libman.model.Document642" %>
+<%@ page import="org.quyet.libman.dao.DocumentDAO642" %>
+<%@ page import="org.quyet.libman.dao.impl.DocumentDaoImpl642" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -87,8 +87,8 @@
     // Xử lý tìm kiếm khi form được submit
     String documentName = request.getParameter("documentName");
     if (documentName != null && !documentName.isEmpty()) {
-        DocumentDAO documentDAO = new DocumentDaoImpl();
-        List<Document> documents = documentDAO.getDocumentsByName(documentName);
+        DocumentDAO642 documentDAO = new DocumentDaoImpl642();
+        List<Document642> documents = documentDAO.getDocumentsByName(documentName);
 
         // Hiển thị kết quả tìm kiếm
         if (documents != null && !documents.isEmpty()) {
@@ -107,13 +107,13 @@
     </thead>
     <tbody>
     <%
-        for (Document doc : documents) {
+        for (Document642 doc : documents) {
     %>
     <tr>
         <td><%= doc.getId() %></td>
         <td>
             <!-- Form truyền dữ liệu chi tiết tài liệu -->
-            <form action="document-detail.jsp" method="post" style="margin: 0;">
+            <form action="document-detail642.jsp" method="post" style="margin: 0;">
                 <input type="hidden" name="documentId" value="<%= doc.getId() %>">
                 <input type="hidden" name="documentName" value="<%= doc.getName() %>">
                 <input type="hidden" name="author" value="<%= doc.getAuthor() %>">

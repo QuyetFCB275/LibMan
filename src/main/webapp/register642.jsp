@@ -1,7 +1,7 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="org.quyet.libman.model.User" %>
-<%@ page import="org.quyet.libman.dao.UserDAO" %>
-<%@ page import="org.quyet.libman.dao.impl.UserDaoImpl" %>
+<%@ page import="org.quyet.libman.model.User642" %>
+<%@ page import="org.quyet.libman.dao.UserDAO642" %>
+<%@ page import="org.quyet.libman.dao.impl.UserDaoImpl642" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -78,8 +78,8 @@
             String password = request.getParameter("password");
 
             if (fullName != null && username != null && password != null) {
-                User user = new User(username, password, fullName);
-                UserDAO userDAO = new UserDaoImpl();
+                User642 user = new User642(username, password, fullName);
+                UserDAO642 userDAO = new UserDaoImpl642();
                 boolean isRegistered = userDAO.addUser(user);
 
                 if (isRegistered) {

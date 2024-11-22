@@ -1,12 +1,12 @@
 package org.quyet.libman.model;
 
-public class User {
+public class User642 {
     String id;
     String username;
     String password;
     String fullname;
 
-    public User(String username, String password, String fullname) {
+    public User642(String username, String password, String fullname) {
         this.username = username;
         this.password = password;
         this.fullname = fullname;

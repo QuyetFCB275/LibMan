@@ -1,6 +1,6 @@
 package org.quyet.libman.model;
 
-public class Document {
+public class Document642 {
     String id;
     String name;
     String author;
@@ -9,7 +9,7 @@ public class Document {
     String publisher;
     String image;
 
-    public Document(String id, String name, String author, String category, float price, String publisher, String image) {
+    public Document642(String id, String name, String author, String category, float price, String publisher, String image) {
         this.id = id;
         this.name = name;
         this.author = author;

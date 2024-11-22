@@ -1,6 +1,6 @@
-<%@ page import="org.quyet.libman.model.Document" %>
-<%@ page import="org.quyet.libman.dao.DocumentDAO" %>
-<%@ page import="org.quyet.libman.dao.impl.DocumentDaoImpl" %>
+<%@ page import="org.quyet.libman.model.Document642" %>
+<%@ page import="org.quyet.libman.dao.DocumentDAO642" %>
+<%@ page import="org.quyet.libman.dao.impl.DocumentDaoImpl642" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
@@ -160,7 +160,7 @@
 
 
 <!-- Nút quay lại -->
-<a href="search-document.jsp">
+<a href="search-document642.jsp">
     <button class="back-button">Quay Lại</button>
 </a>
 <%

@@ -1,7 +1,7 @@
 package org.quyet.libman.dao.impl;
 
-import org.quyet.libman.dao.UserDAO;
-import org.quyet.libman.model.User;
+import org.quyet.libman.dao.UserDAO642;
+import org.quyet.libman.model.User642;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,12 +9,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
-public class UserDaoImpl implements UserDAO {
+public class UserDaoImpl642 implements UserDAO642 {
     private String jdbcURL="jdbc:mysql://localhost:3306/pttk?useSSL=false";
     private String jdbcUsername="root";
     private String jdbcPassword="12345";
 
-    public UserDaoImpl() {
+    public UserDaoImpl642() {
     }
 
     private Connection getConnection() {
@@ -33,13 +33,13 @@ public class UserDaoImpl implements UserDAO {
     }
 
     @Override
-    public User getById(String id) {
+    public User642 getById(String id) {
         return null;
     }
 
     @Override
-    public Boolean addUser(User user) {
-        String sql = "INSERT INTO tblUser (username, password, fullname) VALUES (?, ?, ?)";
+    public Boolean addUser(User642 user) {
+        String sql = "INSERT INTO tblUser642 (username, password, fullname) VALUES (?, ?, ?)";
         try (Connection connection = getConnection();
              PreparedStatement statement = connection.prepareStatement(sql)) {
 
@@ -57,7 +57,7 @@ public class UserDaoImpl implements UserDAO {
     }
 
     @Override
-    public List<User> getAllUser() {
+    public List<User642> getAllUser() {
         return List.of();
     }
 }
